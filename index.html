@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+	<title>Practice !!!!</title>
+	<link rel="shortcut icon" href="#">
+</head>
+<body>
+	<p>
+		Hello!
+		<br>
+		Choose filters from the checklists or make your own with the <b>Add</b> buttons
+		<br>
+		Press the <b>Filter</b> button to see a list of country cards that match all your filters combined!
+		<br>
+		You can also search for a specific country using the search bar. Filters are not apllied to search bar searches!
+		<br>
+		Click on a card to see more info and check out its neighbours
+		<br>
+		Exit the modal and dismiss errors by clicking anywhere outside them
+	</p>
+<div class="active-filters-section">
+	<div class="active-language-filters active-filters">
+		Language Filters:
+	</div>
+	<div class="active-currency-filters active-filters">
+		Currency Filters:
+
+	</div>
+</div>
+<div class="filter-container">
+	<div class="dropdown-checklist-container">
+		<div class="dropdown-checklist">
+			<span id="region-select" class="select">Region:</span>
+			<ul class="region-filter filter">
+				<li><input type="checkbox" id="africa" name="africa" value="Africa" class="region-filter-checkbox">
+				<label for="africa"> Africa</label></li>
+				<li><input type="checkbox" id="americas" name="americas" value="Americas" class="region-filter-checkbox">
+				<label for="americas"> Americas</label></li>
+				<li><input type="checkbox" id="asia" name="asia" value="Asia" class="region-filter-checkbox">
+				<label for="asia"> Asia</label></li>
+				<li><input type="checkbox" id="europe" name="europe" value="Europe" class="region-filter-checkbox">
+				<label for="europe"> Europe</label></li>
+				<li><input type="checkbox" id="oceania" name="oceania" value="Oceania" class="region-filter-checkbox">
+				<label for="oceania"> Oceania</label></li>
+			</ul>
+		</div>
+		<div class="dropdown-checklist population-checklist">
+			<span id="population-select" class="select">Population Range:</span>
+			<ul class="population-filter filter">
+				<li><input type="checkbox" id="pop-range1" name="pop-range1" value="0-1000" class="population-filter-checkbox">
+				<label for="pop-range1"> 0 to 1000</label></li>
+				<li><input type="checkbox" id="pop-range2" name="pop-range2" value="1000-100000" class="population-filter-checkbox">
+				<label for="pop-range2"> 1k to 10k</label></li>
+				<li><input type="checkbox" id="pop-range3" name="pop-range3" value="10000-100000" class="population-filter-checkbox">
+				<label for="pop-range3"> 10k to 100k</label></li>
+				<li><input type="checkbox" id="pop-range4" name="pop-range4" value="100000-1000000" class="population-filter-checkbox">
+				<label for="pop-range4"> 100k to 1mil</label></li>
+				<li><input type="checkbox" id="pop-range5" name="pop-range5" value="1000000-10000000" class="population-filter-checkbox">
+				<label for="pop-range5"> 1mil to 10mil</label></li>
+				<li><input type="checkbox" id="pop-range6" name="pop-range6" value="10000000-100000000" class="population-filter-checkbox">
+				<label for="pop-range6"> 10mil to 100mil</label></li>
+				<li><input type="checkbox" id="pop-range7" name="pop-range7" value="100000000-100000000000" class="population-filter-checkbox">
+				<label for="pop-range7"> 100mil +</label></li>
+				<li class="custom-pop-inputs">
+					<input class="pop-input" type="number" id="pop-min"> to
+					<input class="pop-input" type="number" id="pop-max">
+				</li>
+				<li class="add-custom-pop-range add-custom"> Add Custom Range</li>
+			</ul>
+		</div>
+		<div class="dropdown-checklist">
+			<span id="timezone-select" class="select">Timezone:</span>
+			<ul class="timezone-filter filter">
+			</ul>
+		</div>
+		<button type="button" id="filter-btn">Filter</button>
+	</div>
+	<div>
+		<div class="autocomplete language-autocomplete">
+			<input type="text" placeholder="Language" class="language-input autocomplete-input">
+			<span class="autocomplete-span add-language-filter">Add</span>
+		</div>
+		<div class="autocomplete currency-autocomplete">
+			<input type="text" placeholder="Currency" class="currency-input autocomplete-input">
+			<span class="autocomplete-span add-currency-filter">Add</span>
+		</div>
+	</div>
+</div>
+
+<div class="searchbar-autocomplete-section">
+	<div class="autocomplete country-autocomplete">
+		<input type="text" placeholder="Country Name/Code/Capital" class="country-input autocomplete-input">
+		<span class="autocomplete-span search-span">Search</span>
+	</div>
+</div>
+	<div class="flex-container">
+		<div class="cards" id="cards">
+		</div>
+		<div class="alert-div">
+		</div>
+	</div>
+<div class="modal-bg">
+	<div class="modal">
+		<div class="modal-content">
+			This is the modal content
+		</div>
+		<span class="modal-close">X</span>
+	</div>
+</div>
+</body>
+<script src="script.js" defer></script>
+</html>

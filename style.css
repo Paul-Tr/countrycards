@@ -1,0 +1,292 @@
+body{
+    background-color: rgb(217, 236, 252);
+}
+.modal-img {
+    width: 30%;
+    height: 30%;
+}
+.active-filters-section{
+    margin:5px;
+    font-size: 103%;
+    max-width: 900px;
+    line-height: 35px;
+}
+.active-filters{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.flaggy{
+    width: 70%;
+    height: auto;
+}
+#img2{
+    width:70%;
+    height:auto;
+}
+.flex-container{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.card{
+    background-color: #f1f1f1;
+    margin: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    width: 11em;
+    min-height: 12em;
+    border-radius: 5%;
+    text-align: center;
+    line-height: 75px;
+    font-size: 200%;
+    cursor: pointer;
+}
+.modal-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+    z-index: 90;
+}
+.modal-active{
+    visibility: visible;
+    opacity: 1;
+}
+.modal{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    height: 60%;
+    min-width: 400px;
+    padding: 0px 30px;
+    overflow: auto;
+    border-radius: 5%;
+    font-size: 130%;
+    line-height: 29px;
+    
+}
+.modal-close{
+    position: absolute;
+    top:5px;
+    right: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    color:rgb(178, 34, 34);
+    font-size: 90%;;
+}
+.modal-content{
+    text-align: center;
+}
+.neighbours{
+    display: inline;
+}
+.neighbour-span{
+    color:rgb(0, 0, 255);
+    cursor: pointer;
+}
+.neighbour-span:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.underline{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.larger{
+    font-size: larger;
+}
+/* Styling for dropdown checklists */
+.dropdown-checklist{
+    display: inline-block;
+    border: 1px solid #ccc;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    width:150px;
+    padding:2px 2px;
+    margin: 1px;
+    margin-bottom: 5px;
+}
+.population-checklist{
+    width: 200px;
+}
+.dropdown-checklist ul{
+    position: absolute;
+    z-index: 2;
+    max-height: 300px;
+    overflow: auto;
+    opacity: 1;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+}
+.dropdown-checklist li{
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    /* border-bottom: 1px solid #d4d4d4; */
+}
+.dropdown-checklist li:hover{
+    background-color: #e9e9e9;
+}
+.select {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    padding: 3px 70px 3px 10px;
+    height:18px;
+    
+
+  }
+  .select:after {
+    position: absolute;
+    content: "";
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    padding: 5px;
+    right: 10px;
+    top: 20%;
+    transform: rotate(-135deg);
+  }
+  .select:active:after{
+        right: 8px;
+        top: 21%;
+  }
+#region-select{
+    padding-right:83px;
+}
+#population-select{
+    padding-right: 20px;
+}
+#filter-btn{
+    cursor: pointer;
+    height:30px;
+    width: auto;
+}
+.filter{
+    list-style: none;
+    border: 1px solid #ccc;
+    padding: 2px;
+    margin: 0;
+    border-top: none;
+    display: none;
+    z-index: 2;
+    background-color: white;
+}
+.filter-active{
+    display: block;
+}
+.add-custom{
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+.add-custom:hover{
+    background-color: #D3D3D3;
+}
+.pop-input{
+    width: 90px;
+    font-size: 80%;
+}
+#population-select{
+    width:170px;
+}
+.timezone-filter{
+    overflow: auto;
+    height: 280px;
+}
+.remove-filter{
+    color: red;
+    cursor: pointer;
+}
+.custom-filter{
+    display: inline;
+    padding:0px 7px;
+    font-weight: bold;
+}
+
+/* Styling for autocomplete search bars */
+.autocomplete{
+    position: relative;
+    display: inline-block;
+    margin:1x;
+}
+.autocomplete-input{
+    height: 18px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.autocomplete-span{
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+.autocomplete-items {
+    position: absolute;
+    z-index: 2;
+    max-height: 300px;
+    overflow: auto;
+    opacity: 1;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+  }
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9;
+  }
+  .autocomplete-active {
+    background-color: dodgerblue !important;
+    color: #ffffff;
+  }
+  .country-input{
+    width: 170px;
+  }
+  .search-span{
+      height: 30;
+      width: auto;
+  }
+/* fin autocomplete styling */
+.alert-div{
+    visibility: hidden;
+    background-color: red;
+    font-weight: bold;
+    text-align: center;
+    position: fixed;
+    bottom:0;
+    width:100%;
+    font-size: 230%;
+    padding: 0px 50px;
+}
+.alert-active{
+    visibility: visible;
+}
